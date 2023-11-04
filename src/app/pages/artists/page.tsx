@@ -1,7 +1,9 @@
 import React from 'react'
 import {BsBookmarkHeartFill,BsFillArrowUpRightCircleFill} from 'react-icons/bs'
+import TopSellingShorts from '@/app/components/topSellingShorts'
 
 function Artist() {
+    //dummy data of top selling shorts
     const cards=[
         {
             type: 'sticker',
@@ -32,6 +34,7 @@ function Artist() {
             src: 'https://images.meesho.com/images/products/249234387/ncptc_512.webp'
         },
     ]
+    //dummy data of shop by category cards
     const categoryCards=[
         {
             src:'https://s3.envato.com/files/355679253/DSC00714.jpg',
@@ -72,23 +75,7 @@ function Artist() {
             <div className='text-black  mt-[320px] ml-[120px] font-serif  font-bold text-[32px] w-[300px] h-[44px]'>Top Selling shorts</div>
             <div className='w-full  flex flex-row gap-[40px] jusity-self-start justify-start items-center ml-[120px] '>
             {/* cards */}
-            { cards.map((card)=>(
-
-                <div className='flex flex-col justify-start items-center pt-4 '>
-                    {/* card banner */}
-                    <div style={{backgroundImage:`url(${card.src})`}}
-                    className=' relative  bg-center bg-cover bg-no-repeat h-[368px] w-[304px]  rounded-md'>
-                        {/* icons */}
-                        <BsBookmarkHeartFill className='absolute right-[16px] top-[16px] text-[32px]  text-black'/>
-                    </div>
-                    {/* card type */}
-                    <div className='text-slate-700 text-[20px] text-start w-full '>{card.type}</div>
-                    {/* name of product */}
-                    <div className='text-black text-[24px]  font-sans font-semibold text-start w-full '>{card.name}</div>
-                    {/* price  */}
-                    <div className='text-black text-[32px] font-sans font-bold w-full text-start'>$ {card.price}</div>
-                </div>
-            ))}
+                <TopSellingShorts cards={cards} />
             </div>
                 {/* shop by category */}
             <div className='text-black  mt-[150px] ml-[120px] font-serif  font-bold text-[32px] w-[300px] h-[44px]'>Shop by category</div>
@@ -99,11 +86,11 @@ function Artist() {
                     {/* 3cards */}
                     {categoryCards.map((card)=>(
 
-                    <div className='w-[532px] h-[344px] flex flex-col justify-start  ring-4 ring-black items-center rounded-lg'>
+                    <div className='w-[532px] h-[344px] flex flex-col justify-start  hover:ring-4 hover:ring-black items-center rounded-lg'>
                         {/* banner */}
                         <div  
                         style={{backgroundImage:`url(${card.src})`}}
-                        className="w-full h-[220px] bg-cover bg-no-repeat bg-center bg-black">
+                        className="w-full h-[220px] bg-cover bg-no-repeat bg-center rounded-lg bg-black">
                             {" "}
                         </div>
                         {/* Shop Label Pins */}
@@ -126,11 +113,11 @@ function Artist() {
                         return index<2
                     }).map((card) => (
 
-                        <div className='w-[532px] h-[344px] flex flex-col justify-start  ring-4 ring-black items-center rounded-lg'>
+                        <div className='w-[532px] h-[344px] flex flex-col justify-start  hover:ring-4 hover:ring-black items-center rounded-lg'>
                             {/* banner */}
                             <div
                                 style={{ backgroundImage: `url(${card.src})` }}
-                                className="w-full h-[220px] bg-cover bg-no-repeat bg-center bg-black">
+                                className="w-full h-[220px] bg-cover bg-no-repeat bg-center rounded-lg bg-black">
                                 {" "}
                             </div>
                             {/* Shop Label Pins */}
@@ -152,11 +139,11 @@ function Artist() {
                     {/* 3cards */}
                     {categoryCards.map((card) => (
 
-                        <div className='w-[532px] h-[344px] flex flex-col justify-start  ring-4 ring-black items-center rounded-lg'>
+                        <div className='w-[532px] h-[344px] flex flex-col justify-start hover:ring-4 hover:ring-black items-center rounded-lg'>
                             {/* banner */}
                             <div
                                 style={{ backgroundImage: `url(${card.src})` }}
-                                className="w-full h-[220px] bg-cover bg-no-repeat bg-center bg-black">
+                                className="w-full h-[220px] bg-cover bg-no-repeat bg-center rounded-lg bg-black">
                                 {" "}
                             </div>
                             {/* Shop Label Pins */}
@@ -165,7 +152,7 @@ function Artist() {
                                 <div className='text-[32px] font-sans font-bold'>Shop Label Pins</div>
                                 {/* arrow */}
                                 <div className='flex justify-center items-center p-2 mt-2 scale-150'>
-                                    <BsFillArrowUpRightCircleFill classname='text-[32px]  font-sans font-bold  ' />
+                                    <BsFillArrowUpRightCircleFill className='text-[32px]  font-sans font-bold  ' />
                                 </div>
 
                             </div>
