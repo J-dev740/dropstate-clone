@@ -2,6 +2,8 @@ import React from 'react'
 import { BsBookmarkHeartFill, BsFillArrowUpRightCircleFill } from 'react-icons/bs'
 import TopSellingShorts from '@/app/components/topSellingShorts'
 import CategoryCard from '@/app/components/categoryCard'
+import {RiVerifiedBadgeFill} from 'react-icons/ri'
+
 
 function Artist() {
     //dummy data of top selling shorts
@@ -65,7 +67,11 @@ function Artist() {
                 ></div>
                 {/* profile name */}
                 {/* <div className=' absolute left-[120px] -bottom-[158px]   '> */}
-                <span className='text-black text-[40px] font-extrabold font-sans absolute left-[120px] -bottom-[158px]  '>Call Of Duty</span>
+                <div className='absolute left-[120px] -bottom-[158px] flex flex-row items-center '>
+                <span className='text-black text-[40px] font-bold font-sans   '>Call Of Duty</span>
+                <RiVerifiedBadgeFill className='text-[40px] text-blue-500 inline-block ml-2 ' />
+
+                </div>
                 <span className=' absolute left-[120px] -bottom-[188px]  text-slate-700 text-[20px] font-light '>@Call Of Duty</span>
 
                 {/* </div> */}

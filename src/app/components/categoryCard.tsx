@@ -17,11 +17,11 @@ interface CategoryProps {
 const CategoryCard: React.FC<CategoryProps> = ({card}) => {
     return (
 
-        <div className='w-[532px] h-[344px] flex flex-col justify-start  hover:ring-4 hover:ring-black items-center rounded-lg'>
+        <div className='w-[532px] h-[344px] flex flex-col justify-start  hover:ring-4 hover:ring-black items-center'>
             {/* banner */}
             <div
                 style={{ backgroundImage: `url(${card.src})` }}
-                className="w-full h-[220px] bg-cover bg-no-repeat bg-center rounded-lg bg-black">
+                className="w-full h-[220px] bg-cover bg-no-repeat bg-center  bg-black">
                 {" "}
             </div>
             {/* Shop Label Pins */}

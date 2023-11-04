@@ -21,17 +21,17 @@ const TopSellingShorts: React.FC<TopSellingShortsProps> = ({ cards }) => {
                 <div className='flex flex-col justify-start items-center pt-4 '>
                     {/* card banner */}
                     <div style={{ backgroundImage: `url(${card.src})` }}
-                        className=' relative  bg-center bg-cover bg-no-repeat h-[368px] w-[304px]  rounded-md'>
+                        className=' relative  bg-center bg-cover bg-no-repeat h-[368px] w-[304px]  '>
                         {/* icons */}
 
                         <AiOutlineHeart className=' p-[8px] w-[40px] h-[40px] flex justify-center absolute -right-[16px] bottom-[22px] text-[32px]  text-white bg-black bg-opacity-70 backdrop-blur-md '></AiOutlineHeart>
                     </div>
                     {/* card type */}
-                    <div className='text-slate-700 text-[20px] text-start w-full '>{card.type}</div>
+                    <div className='text-[#AEAEAE] text-[20px] text-start w-full pt-[24px] '>{card.type}</div>
                     {/* name of product */}
-                    <div className='text-black text-[24px]  font-sans font-semibold text-start w-full '>{card.name}</div>
+                    <div className='text-black text-[24px]  font-sans font-semibold text-start w-full -mt-2'>{card.name}</div>
                     {/* price  */}
-                    <div className='text-black text-[32px] font-sans font-bold w-full text-start'>$ {card.price}</div>
+                    <div className='text-black text-[32px] font-sans font-semibold w-full text-start'>$ {card.price}</div>
                 </div>
             ))
         
