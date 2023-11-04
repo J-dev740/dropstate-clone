@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsBookmarkHeartFill } from 'react-icons/bs'
+import { AiOutlineHeart } from 'react-icons/ai'
 
 interface Card {
     type: string,
@@ -23,7 +23,8 @@ const TopSellingShorts: React.FC<TopSellingShortsProps> = ({ cards }) => {
                     <div style={{ backgroundImage: `url(${card.src})` }}
                         className=' relative  bg-center bg-cover bg-no-repeat h-[368px] w-[304px]  rounded-md'>
                         {/* icons */}
-                        <BsBookmarkHeartFill className='absolute right-[16px] top-[16px] text-[32px]  text-black' />
+
+                        <AiOutlineHeart className=' p-[8px] w-[40px] h-[40px] flex justify-center absolute -right-[16px] bottom-[22px] text-[32px]  text-white bg-black bg-opacity-70 backdrop-blur-md '></AiOutlineHeart>
                     </div>
                     {/* card type */}
                     <div className='text-slate-700 text-[20px] text-start w-full '>{card.type}</div>
