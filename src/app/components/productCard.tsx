@@ -8,22 +8,24 @@ interface Card {
     src: string
     
 }
- interface TopSellingShortsProps {
+ interface ProductCardProps {
     ProductCard: Card
     // cards: Array<Card>
  }
 
-const ProductCard: React.FC<TopSellingShortsProps> = ({ ProductCard }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ ProductCard }) => {
     return (
         
 
                 <div className='flex flex-col justify-start items-center pt-4 '>
-                    {/* card banner */}
+                    {/* card Image */}
                     <div style={{ backgroundImage: `url(${ProductCard.src})` }}
                         className=' relative  bg-center bg-cover bg-no-repeat h-[368px] w-[304px]  '>
                         {/* icon */}
-                        <WishListIcon />
-
+                        <div className='absolute -right-[16px] bottom-[22px]'>
+                        <WishListIcon/>
+                        </div>
+                        
                     </div>
                     {/* card type */}
                     <div className='text-[#AEAEAE] text-[20px] text-start w-full pt-[24px] font-normal font-Plus_Jakarta_Sans '>{ProductCard.type}</div>

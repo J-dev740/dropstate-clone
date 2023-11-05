@@ -1,11 +1,10 @@
 import React from 'react'
 import {  BsFillArrowUpRightCircleFill } from 'react-icons/bs'
 import ProductCard from '@/app/components/productCard'
-import CategoryCard from '@/app/components/categoryCard'
 import {RiVerifiedBadgeFill} from 'react-icons/ri'
 
 
-function Artist() {
+function ArtistPage() {
     //dummy data of top selling shorts
     const cards = [
         {
@@ -58,14 +57,14 @@ function Artist() {
                 <RiVerifiedBadgeFill className='text-[36px] text-[#4967FF] inline-block ml-1 ' />
 
                 </div>
-                <span className=' absolute left-[120px] -bottom-[188px]  text-slate-700 text-[20px] font-normal font-Plus_Jakarta_Sans '>@CodeGame</span>
+                <span className=' absolute left-[120px] -bottom-[188px]  text-[#AEAEAE] text-[20px] font-medium font-Plus_Jakarta_Sans '>@CodeGame</span>
 
             
             </div>
                 {/* TopSelling shorts */}
             <div className='mt-[320px] ml-[120px] flex flex-col '>
                 {/* title */}
-                <div className='text-black  font-DM_Sans  font-normal text-[32px] w-[300px] h-[44px] mb-[32px]'>Top Selling shorts</div>
+                <div className='text-black  font-DM_Sans  font-normal text-[32px]  mb-[32px]'>Top Selling shorts</div>
                 {/* ProductCardList */}
                 <div className='w-full  flex flex-row gap-[40px] jusity-self-start justify-start items-center  '>
                     {/* cards */}
@@ -87,7 +86,7 @@ function Artist() {
     )
 }
 
-export default Artist
+export default ArtistPage
 
 
 

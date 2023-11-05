@@ -15,12 +15,6 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-				courseFont: ["poppins", "serif"],
-				Anek: ["Anek Latin", "sans-serif"],
-				poppins: ["Poppins", "sans-serif"],
-				Inter: ["Inter", "sans-serif"],
-				Nosifer:['Nosifer', "sans-serif"],
-				gruppo:['Gruppo', "sans-serif"],
         Plus_Jakarta_Sans: ["Plus Jakarta Sans", "sans-serif"],
         DM_Sans: ["DM Serif Display", "serif"],
         Neue: ["Helvetica Neue", "sans-serif"],
