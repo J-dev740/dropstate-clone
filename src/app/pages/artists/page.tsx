@@ -53,8 +53,8 @@ function Artist() {
                 ></div>
                 {/* profile name */}
                 
-                <div className='absolute left-[120px] -bottom-[158px] flex flex-row items-center '>
-                <span className='text-black text-[40px]  font-normal  font-Plus_Jakarta_Sans   '>Call Of Duty</span>
+                <div className='absolute left-[120px] -bottom-[166px] flex flex-row items-center '>
+                <span className='text-black text-[40px]  font-bold  font-Plus_Jakarta_Sans   '>Call Of Duty</span>
                 <RiVerifiedBadgeFill className='text-[36px] text-[#4967FF] inline-block ml-1 ' />
 
                 </div>

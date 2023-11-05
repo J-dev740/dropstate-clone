@@ -1,5 +1,4 @@
 import React from 'react'
-import { AiOutlineHeart } from 'react-icons/ai'
 import WishListIcon from './wishListIcon'
 
 interface Card {
@@ -29,9 +28,9 @@ const ProductCard: React.FC<TopSellingShortsProps> = ({ ProductCard }) => {
                     {/* card type */}
                     <div className='text-[#AEAEAE] text-[20px] text-start w-full pt-[24px] font-normal font-Plus_Jakarta_Sans '>{ProductCard.type}</div>
                     {/* name of product */}
-                    <div className='text-black text-[24px]  text-start w-full -mt-2 font-normal font-Plus_Jakarta_Sans'>{ProductCard.name}</div>
+                    <div className='text-black text-[24px]  text-start w-full -mt-2 font-medium font-Plus_Jakarta_Sans'>{ProductCard.name}</div>
                     {/* price  */}
-                    <div className='text-black text-[32px] font-sans font-semibold w-full text-start'>$ {ProductCard.price}</div>
+                    <div className='text-black text-[32px] font-Neue font-medium w-full text-start'>$ {ProductCard.price}</div>
                 </div>
         
         

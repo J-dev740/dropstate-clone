@@ -23,6 +23,7 @@ const config: Config = {
 				gruppo:['Gruppo', "sans-serif"],
         Plus_Jakarta_Sans: ["Plus Jakarta Sans", "sans-serif"],
         DM_Sans: ["DM Serif Display", "serif"],
+        Neue: ["Helvetica Neue", "sans-serif"],
 			},
     },
   },
