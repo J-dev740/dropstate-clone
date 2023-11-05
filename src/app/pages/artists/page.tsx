@@ -1,6 +1,6 @@
 import React from 'react'
-import { BsBookmarkHeartFill, BsFillArrowUpRightCircleFill } from 'react-icons/bs'
-import TopSellingShorts from '@/app/components/topSellingShorts'
+import {  BsFillArrowUpRightCircleFill } from 'react-icons/bs'
+import ProductCard from '@/app/components/productCard'
 import CategoryCard from '@/app/components/categoryCard'
 import {RiVerifiedBadgeFill} from 'react-icons/ri'
 
@@ -37,21 +37,8 @@ function Artist() {
             src: 'https://images.meesho.com/images/products/249234387/ncptc_512.webp'
         },
     ]
-    //dummy data of shop by category cards
-    const categoryCards = [
-        {
-            src: 'https://s3.envato.com/files/355679253/DSC00714.jpg',
-            text: 'Shop Label pins'
-        },
-        {
-            src: 'https://m.media-amazon.com/images/I/815hl9wPzdL._AC_UF1000,1000_QL80_.jpg',
-            text: 'Shop Label pins'
-        },
-        {
-            src: 'https://mcmug.co.uk/wp-content/uploads/2020/04/MAC_FUN_183-WHITE.jpg',
-            text: 'Shop Label pins'
-        },
-    ]
+
+
     return (
         <div className='bg-white h-full w-full flex flex-col justify-between gap-4 '>
             {/* banner */}
@@ -60,66 +47,39 @@ function Artist() {
                 style={{ backgroundImage: `url(https://image.api.playstation.com/vulcan/ap/rnd/202211/0901/hJsSsHh7P019cNOT7YHp56jK.png?w=1920&thumb=false)` }}
             >
                 {/* profile pic */}
-                {/* <div className='  absolute left-[120px] -bottom-[160px] flex flex-col items-center justify-center p-4'>
-                </div> */}
+            
                 <div className=' absolute left-[120px] -bottom-[108px] bg-cover bg-center bg-no-repeat ring-[8px] ring-white w-[200px] h-[200px] rounded-full '
                     style={{ backgroundImage: `url(https://image.api.playstation.com/vulcan/ap/rnd/202211/0901/hJsSsHh7P019cNOT7YHp56jK.png?w=1920&thumb=false)` }}
                 ></div>
                 {/* profile name */}
-                {/* <div className=' absolute left-[120px] -bottom-[158px]   '> */}
+                
                 <div className='absolute left-[120px] -bottom-[158px] flex flex-row items-center '>
-                <span className='text-black text-[40px] font-bold font-sans   '>Call Of Duty</span>
-                <RiVerifiedBadgeFill className='text-[40px] text-blue-500 inline-block ml-2 ' />
+                <span className='text-black text-[40px]  font-normal  font-Plus_Jakarta_Sans   '>Call Of Duty</span>
+                <RiVerifiedBadgeFill className='text-[36px] text-[#4967FF] inline-block ml-1 ' />
 
                 </div>
-                <span className=' absolute left-[120px] -bottom-[188px]  text-slate-700 text-[20px] font-light '>@Call Of Duty</span>
+                <span className=' absolute left-[120px] -bottom-[188px]  text-slate-700 text-[20px] font-normal font-Plus_Jakarta_Sans '>@CodeGame</span>
 
-                {/* </div> */}
+            
+            </div>
+                {/* TopSelling shorts */}
+            <div className='mt-[320px] ml-[120px] flex flex-col '>
+                {/* title */}
+                <div className='text-black  font-DM_Sans  font-normal text-[32px] w-[300px] h-[44px] mb-[32px]'>Top Selling shorts</div>
+                {/* ProductCardList */}
+                <div className='w-full  flex flex-row gap-[40px] jusity-self-start justify-start items-center  '>
+                    {/* cards */}
+                    {
+                        cards.map((card) => (
+                            <ProductCard ProductCard={card} />
+                        ))}
+                </div>
+
             </div>
 
-
-            {/* title  */}
-            <div className='text-black  mt-[320px] ml-[120px] font-serif  font-bold text-[32px] w-[300px] h-[44px]'>Top Selling shorts</div>
-            <div className='w-full  flex flex-row gap-[40px] jusity-self-start justify-start items-center ml-[120px] '>
-                {/* cards */}
-                <TopSellingShorts cards={cards} />
-            </div>
+            
             {/* shop by category */}
-            <div className='text-black  mt-[150px] ml-[120px] font-serif  font-bold text-[32px] w-[300px] h-[44px]'>Shop by category</div>
-            {/* shop by category cards */}
-            <div className='w-full ml-[120px] mt-[32px] mb-4 flex flex-col justify-start gap-[32px] items-center'>
-                {/* section1  */}
-                <div className='w-full flex flex-row gap-[42px] justify-start items-center '>
-                    {/* 3cards */}
-                    {categoryCards.map((card) => (
 
-                        <CategoryCard card={card} />
-
-                    ))}
-                </div>
-                {/* section2 */}
-                <div className='w-full  px-[369px] flex flex-row gap-[42px] justify-start items-center'>
-                    {/* 2cards */}
-                    {categoryCards.filter((card, index) => {
-                        return index < 2
-                    }).map((card) => (
-
-                        <CategoryCard card={card} />
-
-                    ))}
-                </div>
-                {/* section3 */}
-
-                <div className='w-full  flex flex-row gap-[42px] justify-start items-center'>
-                    {/* 3cards */}
-                    {categoryCards.map((card) => (
-
-                        <CategoryCard card={card} />
-
-                    ))}
-                </div>
-
-            </div>
 
 
 
@@ -128,3 +88,9 @@ function Artist() {
 }
 
 export default Artist
+
+
+
+
+
+

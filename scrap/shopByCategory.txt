@@ -1,0 +1,35 @@
+        <div className='text-black  mt-[150px] ml-[120px] font-serif  font-bold text-[32px] w-[300px] h-[44px]'>Shop by category</div>
+        {/* shop by category cards */}
+        <div className='w-full ml-[120px] mt-[32px] mb-4 flex flex-col justify-start gap-[32px] items-center'>
+            {/* section1  */}
+            <div className='w-full flex flex-row gap-[42px] justify-start items-center '>
+                {/* 3cards */}
+                {categoryCards.map((card) => (
+
+                    <CategoryCard card={card} />
+
+                ))}
+            </div>
+            {/* section2 */}
+            <div className='w-full  px-[369px] flex flex-row gap-[42px] justify-start items-center'>
+                {/* 2cards */}
+                {categoryCards.filter((card, index) => {
+                    return index < 2
+                }).map((card) => (
+
+                    <CategoryCard card={card} />
+
+                ))}
+            </div>
+            {/* section3 */}
+
+            <div className='w-full  flex flex-row gap-[42px] justify-start items-center'>
+                {/* 3cards */}
+                {categoryCards.map((card) => (
+
+                    <CategoryCard card={card} />
+
+                ))}
+            </div>
+
+        </div>
