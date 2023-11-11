@@ -3,8 +3,61 @@ import ProductCard from '@/app/components/productCard'
 import WishListIcon from '@/app/components/wishListIcon'
 import React, { useState } from 'react'
 
+export interface ProductType{
+    productImage:string[],
+    type:string,
+    name:string,
+    designedBy:string,
+    sizeChart:string[],
+    colorChart:string[],
+    availableQuantity:number,
+    price:number,
+    deliveryDetails:{
+        returnPeriod:number
+        guarantee:boolean,
+        qualityAssured:boolean,
+        codAvailable:boolean
+    },
+    designFeature:{
+        description:string,
+        material:string,
+        washing:string,
+        print:string,
+        ironing:string
+    },
+    src:string
+}
 function ProductPage() {
+    //dummy data for Product Object 
+    const Product:ProductType={
+        productImage:['https://m.media-amazon.com/images/I/51Edzp+ZLoL._AC_UY580_.jpg',
+        'https://m.media-amazon.com/images/I/51Edzp+ZLoL._AC_UY580_.jpg',
+        'https://m.media-amazon.com/images/I/51Edzp+ZLoL._AC_UY580_.jpg'],
+        type:'T-shirt',
+        name:'Dimensional',
+        designedBy:'Call of Duty',
+        sizeChart:['S','M','L','XL','XXL'],
+        colorChart:['blue','red','green','yellow'],
+        availableQuantity:5,
+        price:24.46,
+        deliveryDetails:{
+            returnPeriod:7,
+            guarantee:true,
+            qualityAssured:true,
+            codAvailable:true,
+        },
+        designFeature:{
+            description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s',
+            material:'90% Cotton, 10% Polyester',
+            washing:'Machine was, Hand wash',
+            print:'Direct To garment',
+            ironing:'Do not iron on prints'
+        },
+        src:'https://m.media-amazon.com/images/I/51Edzp+ZLoL._AC_UY580_.jpg'
+    }
+
     //dummy data of product cards
+
     const [open,isOpen]=useState(false)
     const cards = [
         {
