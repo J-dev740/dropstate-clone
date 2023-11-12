@@ -16,7 +16,6 @@ interface Props {
 function productDetails({ ProductDetails }: Props) {
     const { type, name, designedBy: designer, sizeChart, colorChart, price:basePrice, deliveryDetails, designFeature,availableQuantity } = ProductDetails
     const [open, isOpen] = useState(false)
-    const [count, setCount] = useState(1)
     const[buyItem,setBuyItem]=useState<BuyOptions>({
         quantity:1,
         price:(basePrice?basePrice:0),
@@ -41,7 +40,7 @@ function productDetails({ ProductDetails }: Props) {
                     {sizeChart?.map((size, index) => (
                         <div key={index}
                         onClick={()=>setBuyItem((prev)=>({...prev,size:size}))}
-                         className=' border-[1px] border-black px-[12px] py-[8px] text-[16px] font-Plus_Jakarta_Sans font-medium h-[36px] flex items-center'>{size}</div>
+                         className=' border-[1px] border-black px-[12px] py-[8px] hover:bg-black hover:text-white hover:cursor-pointer text-[16px] font-Plus_Jakarta_Sans font-medium h-[36px] flex items-center'>{size}</div>
                     ))}
                 </div>
             </div>
