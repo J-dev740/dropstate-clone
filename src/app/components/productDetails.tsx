@@ -1,14 +1,28 @@
 import React, { useState } from 'react'
 import { ProductType } from './interface/productType'
 
+interface BuyOptions{
+    quantity:number
+    price:number
+    color:string
+    size:string
+
+}
+
 interface Props {
     ProductDetails: Partial<ProductType>
 }
 
 function productDetails({ ProductDetails }: Props) {
-    const { type, name, designedBy: designer, sizeChart, colorChart, price, deliveryDetails, designFeature } = ProductDetails
+    const { type, name, designedBy: designer, sizeChart, colorChart, price:basePrice, deliveryDetails, designFeature,availableQuantity } = ProductDetails
     const [open, isOpen] = useState(false)
     const [count, setCount] = useState(1)
+    const[buyItem,setBuyItem]=useState<BuyOptions>({
+        quantity:1,
+        price:(basePrice?basePrice:0),
+        color:colorChart?colorChart[0]:'',
+        size:sizeChart?sizeChart[0]:''
+    })
 
     return (
         <div className='w-full bg-white flex flex-col items-start justify-start text-start '>
@@ -25,7 +39,9 @@ function productDetails({ ProductDetails }: Props) {
                 {/* size chart */}
                 <div className='flex flex-row w-full justify-start items-center gap-[12px]'>
                     {sizeChart?.map((size, index) => (
-                        <div key={index} className=' border-[1px] border-black px-[12px] py-[8px] text-[16px] font-Plus_Jakarta_Sans font-medium h-[36px] flex items-center'>{size}</div>
+                        <div key={index}
+                        onClick={()=>setBuyItem((prev)=>({...prev,size:size}))}
+                         className=' border-[1px] border-black px-[12px] py-[8px] text-[16px] font-Plus_Jakarta_Sans font-medium h-[36px] flex items-center'>{size}</div>
                     ))}
                 </div>
             </div>
@@ -36,7 +52,10 @@ function productDetails({ ProductDetails }: Props) {
                 {/* color chart */}
                 <div className='flex flex-row w-full justify-start items-center gap-[12px]'>
                     {colorChart?.map((color, index) => (
-                        <div key={index} className='w-[37px] h-[37px] rounded-full  hover:ring-2 hover:ring-black' style={{ backgroundColor: `${color}` }}></div>
+                        <div key={index}
+                        onClick={()=>setBuyItem((prev)=>({...prev,color:color}))}
+
+                         className='w-[37px] h-[37px] rounded-full  hover:ring-2 hover:ring-black' style={{ backgroundColor: `${color}` }}></div>
 
                     ))}
 
@@ -52,14 +71,39 @@ function productDetails({ ProductDetails }: Props) {
                     {/* quantity selector */}
                     <div className='  w-[146px] h-[39px] text-[16px] font-Plus_Jakarta_Sans font-bold flex flex-row justify-between border-[1px] border-black px-[12px] py-[8px]'>
                         <div onClick={() => {
-                            if (count > 1) setCount(count - 1)
-                            else setCount(1)
-                        }} className='text-[16px]  border-black  flex items-center justify-center hover:cursor-pointer'>-</div>
-                        <div className='flex items-center justify-center'>{count}</div>
-                        <div onClick={() => { setCount(count + 1) }} className='text-[16px]   flex items-center justify-center hover:cursor-pointer'>+</div>
+                            if (buyItem.quantity > 1) {
+                                setBuyItem((prev) => ({
+                                    ...prev,
+                                    quantity: prev.quantity - 1,
+                                    price: Number(((basePrice?basePrice:0 )* (prev.quantity - 1)).toFixed(2)),
+                                }));
+                            } else {
+                                setBuyItem((prev) => ({
+                                    ...prev,
+                                    quantity: 1,
+                                    price:basePrice?basePrice:0
+                                }));
+                            }
+                            }} className='text-[16px]  border-black  flex items-center justify-center hover:cursor-pointer'>-</div>
+                        <div className='flex items-center justify-center'>{buyItem.quantity}</div>
+                        <div onClick={() => {
+                            if (buyItem.quantity < (availableQuantity?availableQuantity:1)) {
+                                setBuyItem((prev) => ({
+                                    ...prev,
+                                    quantity: prev.quantity + 1,
+                                    price: Number(((basePrice?basePrice:0) * (prev.quantity + 1)).toFixed(2)),
+                                }));
+                            } else {
+                                setBuyItem((prev) => ({
+                                    ...prev,
+                                    quantity: availableQuantity?availableQuantity:1,
+                                    price:Number(((basePrice?basePrice:0)*(availableQuantity?availableQuantity:1)).toFixed(2))
+                                }));
+                            }
+                            }} className='text-[16px]   flex items-center justify-center hover:cursor-pointer'>+</div>
                     </div>
                     {/* price display */}
-                    <div className='absolute top-[23px] right-0 font-Neue font-semibold text-[40px] text-[#171717]'>${(count * (price ? price : 0)).toFixed(2)}</div>
+                    <div className='absolute top-[23px] right-0 font-Neue font-semibold text-[40px] text-[#171717]'>${buyItem.price}</div>
 
                 </div>
             </div>
