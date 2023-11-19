@@ -242,7 +242,7 @@ function productDetails({ ProductDetails }: Props) {
                     {false && (
                         <div className='w-full flex flex-col items-start gap-[8px] mt-[24px]'>
                             {/* description div */}
-                            <div className='text-[#171717] font-normal mb-[16px]'>
+                            <div className='text-[#171717] font-normal mb-[24px]'>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                 when an  Unknown printer took a galley of type and scrambled it to make a type specimen book.
