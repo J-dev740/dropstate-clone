@@ -82,11 +82,13 @@ export default function Home() {
             artists
             <div className='absolute -right-[20%] top-[35%] text-[14px] font-bold font-Plus_Jakarta_Sans text-[#171717]'>* trending</div>
           </div>
+          <div className='flex flex-row w-full overflow-x-auto no-scrollbar  animate-run '>
+
           {/* single card */}
           <div
             onMouseEnter={(e) => { setHover(1) }}
             onMouseLeave={(e) => { setHover(0) }}
-            className='group w-[320px] h-[512px] flex flex-col  '>
+            className='group min-w-[20%]  h-[512px] flex flex-col  '>
             {/* image */}
             <div className=' transition-all transform duration-150 ease-in-out h-[76.5%] group-hover:h-[51.5%] bg-slate-400 w-full' ></div>
             {/* name */}
@@ -118,7 +120,7 @@ export default function Home() {
           <div
             onMouseEnter={(e) => { setHover(2) }}
             onMouseLeave={(e) => { setHover(0) }}
-            className='group w-[320px] h-[512px] flex flex-col  '>
+            className='group min-w-[20%]  h-[512px] flex flex-col  '>
             {/* image */}
             <div className=' transition-all transform duration-150 ease-in-out h-[76.5%] group-hover:h-[51.5%] bg-slate-400 w-full' ></div>
             {/* name */}
@@ -149,7 +151,7 @@ export default function Home() {
           <div
             onMouseEnter={(e) => { setHover(3) }}
             onMouseLeave={(e) => { setHover(0) }}
-            className='group w-[320px] h-[512px] flex flex-col  '>
+            className='group min-w-[20%] h-[512px] flex flex-col  '>
             {/* image */}
             <div className=' transition-all transform duration-150 ease-in-out h-[76.5%] group-hover:h-[51.5%] bg-slate-400 w-full' ></div>
             {/* name */}
@@ -180,7 +182,7 @@ export default function Home() {
           <div
             onMouseEnter={(e) => { setHover(4) }}
             onMouseLeave={(e) => { setHover(0) }}
-            className='group w-[320px] h-[512px] flex flex-col  '>
+            className='group min-w-[20%] h-[512px] flex flex-col  '>
             {/* image */}
             <div className=' transition-all transform duration-150 ease-in-out h-[76.5%] group-hover:h-[51.5%] bg-slate-400 w-full' ></div>
             {/* name */}
@@ -211,7 +213,7 @@ export default function Home() {
           <div
             onMouseEnter={(e) => { setHover(5) }}
             onMouseLeave={(e) => { setHover(0) }}
-            className='group w-[320px] h-[512px] flex flex-col '>
+            className='group min-w-[20%] h-[512px] flex flex-col '>
             {/* image */}
             <div className=' transition-all transform duration-150 ease-in-out h-[76.5%] group-hover:h-[51.5%] bg-slate-400 w-full' ></div>
             {/* name */}
@@ -242,7 +244,7 @@ export default function Home() {
           <div
             onMouseEnter={(e) => { setHover(6) }}
             onMouseLeave={(e) => { setHover(0) }}
-            className='group w-[320px] h-[512px] flex flex-col '>
+            className='group min-w-[20%] h-[512px] flex flex-col '>
             {/* image */}
             <div className=' transition-all transform duration-150 ease-in-out h-[76.5%] group-hover:h-[51.5%] bg-slate-400 w-full' ></div>
             {/* name */}
@@ -269,6 +271,100 @@ export default function Home() {
               </Link>
 
             </div>
+          </div>
+          <div
+            onMouseEnter={(e) => { setHover(6) }}
+            onMouseLeave={(e) => { setHover(0) }}
+            className='group min-w-[20%] h-[512px] flex flex-col '>
+            {/* image */}
+            <div className=' transition-all transform duration-150 ease-in-out h-[76.5%] group-hover:h-[51.5%] bg-slate-400 w-full' ></div>
+            {/* name */}
+            <div className='h-[23.5%] group-hover:h-[49.5%] w-full flex flex-col items-start '>
+
+              <div className=' flex flex-row gap-[4px] mt-[21px] h-fit items-start mx-auto mb-[24px]'>
+                <div className='text-black font-bold text-[18px] font-Plus_Jakarta_Sans'>Elon Musk</div>
+                <RiVerifiedBadgeFill className='text-[18px] text-[#4967FF] place-self-center ' />
+
+              </div>
+              {/* pitch text */}
+              <div
+
+                className={hover == 6 ? ' ease-in mx-auto w-[239px] h-[72px]  text-left text-black font-medium overflow-y-scroll no-scrollbar font-Plus_Jakarta_Sans leading-tight  text-[14px]' : 'hidden'}>
+                Official Riot Games store on dropstate where pixels meet passion.
+                Explore exclusive gaming gear inspired by your favorite titles.</div>
+              {/* link to storefront */}
+              <Link className='mt-[56px] mx-auto flex flex-row '
+                href='#'>
+                <div
+                  className={hover == 6 ? ' ease-out flex flex-row gap-[6px] font-Plus_Jakarta_Sans font-semibold text-[12px] text-[#202020] py-[10px] px-[22px] border-[1px]  border-black' : 'hidden'}>
+                  Visit Storefront <span className='w-[13px] h-[13px] rounded-full  flex justify-center items-center text-center bg-black text-white p-[1.64px] '><GoArrowUpRight /></span>
+                </div>
+              </Link>
+
+            </div>
+          </div>
+          <div
+            onMouseEnter={(e) => { setHover(6) }}
+            onMouseLeave={(e) => { setHover(0) }}
+            className='group min-w-[20%] h-[512px] flex flex-col '>
+            {/* image */}
+            <div className=' transition-all transform duration-150 ease-in-out h-[76.5%] group-hover:h-[51.5%] bg-slate-400 w-full' ></div>
+            {/* name */}
+            <div className='h-[23.5%] group-hover:h-[49.5%] w-full flex flex-col items-start '>
+
+              <div className=' flex flex-row gap-[4px] mt-[21px] h-fit items-start mx-auto mb-[24px]'>
+                <div className='text-black font-bold text-[18px] font-Plus_Jakarta_Sans'>Elon Musk</div>
+                <RiVerifiedBadgeFill className='text-[18px] text-[#4967FF] place-self-center ' />
+
+              </div>
+              {/* pitch text */}
+              <div
+
+                className={hover == 6 ? ' ease-in mx-auto w-[239px] h-[72px]  text-left text-black font-medium overflow-y-scroll no-scrollbar font-Plus_Jakarta_Sans leading-tight  text-[14px]' : 'hidden'}>
+                Official Riot Games store on dropstate where pixels meet passion.
+                Explore exclusive gaming gear inspired by your favorite titles.</div>
+              {/* link to storefront */}
+              <Link className='mt-[56px] mx-auto flex flex-row '
+                href='#'>
+                <div
+                  className={hover == 6 ? ' ease-out flex flex-row gap-[6px] font-Plus_Jakarta_Sans font-semibold text-[12px] text-[#202020] py-[10px] px-[22px] border-[1px]  border-black' : 'hidden'}>
+                  Visit Storefront <span className='w-[13px] h-[13px] rounded-full  flex justify-center items-center text-center bg-black text-white p-[1.64px] '><GoArrowUpRight /></span>
+                </div>
+              </Link>
+
+            </div>
+          </div>
+          <div
+            onMouseEnter={(e) => { setHover(6) }}
+            onMouseLeave={(e) => { setHover(0) }}
+            className='group min-w-[20%]   h-[512px] flex flex-col '>
+            {/* image */}
+            <div className=' transition-all transform duration-150 ease-in-out h-[76.5%] group-hover:h-[51.5%] bg-slate-400 w-full' ></div>
+            {/* name */}
+            <div className='h-[23.5%] group-hover:h-[49.5%] w-full flex flex-col items-start '>
+
+              <div className=' flex flex-row gap-[4px] mt-[21px] h-fit items-start mx-auto mb-[24px]'>
+                <div className='text-black font-bold text-[18px] font-Plus_Jakarta_Sans'>Elon Musk</div>
+                <RiVerifiedBadgeFill className='text-[18px] text-[#4967FF] place-self-center ' />
+
+              </div>
+              {/* pitch text */}
+              <div
+
+                className={hover == 6 ? ' ease-in mx-auto w-[239px] h-[72px]  text-left text-black font-medium overflow-y-scroll no-scrollbar font-Plus_Jakarta_Sans leading-tight  text-[14px]' : 'hidden'}>
+                Official Riot Games store on dropstate where pixels meet passion.
+                Explore exclusive gaming gear inspired by your favorite titles.</div>
+              {/* link to storefront */}
+              <Link className='mt-[56px] mx-auto flex flex-row '
+                href='#'>
+                <div
+                  className={hover == 6 ? ' ease-out flex flex-row gap-[6px] font-Plus_Jakarta_Sans font-semibold text-[12px] text-[#202020] py-[10px] px-[22px] border-[1px]  border-black' : 'hidden'}>
+                  Visit Storefront <span className='w-[13px] h-[13px] rounded-full  flex justify-center items-center text-center bg-black text-white p-[1.64px] '><GoArrowUpRight /></span>
+                </div>
+              </Link>
+
+            </div>
+          </div>
           </div>
 
         </div>
