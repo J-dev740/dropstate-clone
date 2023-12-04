@@ -38,7 +38,7 @@ const config: Config = {
 
       },
       animation:{
-      run:'moveRtoL 20s linear infinite'
+      run:'moveRtoL 30s linear infinite'
       }
     },
   },
