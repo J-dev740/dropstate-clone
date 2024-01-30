@@ -7,7 +7,7 @@ interface props{
 }
 const Drops:React.FC<props>=({tdrops})=> {
   return (
-      <div className='relative flex flex-row  w-full justify-center '>
+      <div className='relative flex flex-row  w-full justify-center gap-[8px] '>
           {/* header relative to artists section*/}
           <div className='absolute -top-[106px] left-[38%]  w-fit    h-[165px] font-normal font-DM_Sans text-[#171717]  text-justify  place-content-center leading-normal text-[120px]'>
               drops
@@ -16,7 +16,7 @@ const Drops:React.FC<props>=({tdrops})=> {
           </div>
           {/* single card */}
           {
-              tdrops.map((tdrop, index) => (
+              tdrops.filter((item,index)=>index<3).map((tdrop, index) => (
                   <div
                       className='bg-center bg-cover bg-no-repeat group z-10 w-[330px] h-[400px] flex flex-col bg-slate-200'
                       style={{ backgroundImage: `url(${tdrop.img})` }}
