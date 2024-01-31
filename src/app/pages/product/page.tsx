@@ -67,11 +67,56 @@ function ProductPage() {
             price: 45.4,
             src: 'https://images.meesho.com/images/products/249234387/ncptc_512.webp'
         },
+        {
+            type: 'sticker',
+            name: 'Nike AirForce 1',
+            price: 24.46,
+            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQUabefSDF7E6OyoA171anzt1uL08dVuBMOg&usqp=CAU'
+        },
+        {
+            type: 'T-shirt',
+            name: 'Dimensional',
+            price: 40.46,
+            src: 'https://media.centrepointstores.com/i/centrepoint/8914398-AW23MCORE5-SPW239623_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-m-prt-pdp-2x$'
+        }, {
+            type: 'Over-sized Tshirt',
+            name: 'Dragon Ball Z',
+            price: 200.46,
+            src: 'https://100mph.cc/cdn/shop/files/unisex-v-neck-tee-black-front-6493a4d0deb23_2048x2048.jpg?v=1687547335'
+        }, {
+            type: 'Printed Tshirt',
+            name: 'mikey mouse',
+            price: 30.63,
+            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgT_WCxAVrI-jC-CDwJvgbcHpwi8AQU10ydj-LFur5JXtEvTB-FSCqZYzOAqlmTg05XUg&usqp=CAU'
+        },
+        {
+            type: 'printed Mug',
+            name: 'Mug Anime Edition',
+            price: 45.4,
+            src: 'https://images.meesho.com/images/products/249234387/ncptc_512.webp'
+        },
+        {
+            type: 'sticker',
+            name: 'Nike AirForce 1',
+            price: 24.46,
+            src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQUabefSDF7E6OyoA171anzt1uL08dVuBMOg&usqp=CAU'
+        },
+        {
+            type: 'T-shirt',
+            name: 'Dimensional',
+            price: 40.46,
+            src: 'https://media.centrepointstores.com/i/centrepoint/8914398-AW23MCORE5-SPW239623_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-m-prt-pdp-2x$'
+        }, {
+            type: 'Over-sized Tshirt',
+            name: 'Dragon Ball Z',
+            price: 200.46,
+            src: 'https://100mph.cc/cdn/shop/files/unisex-v-neck-tee-black-front-6493a4d0deb23_2048x2048.jpg?v=1687547335'
+        }, 
     ]
     return (
-        <div className='flex flex-col h-fit w-full   bg-white text-black gap-[160px] '>
+        <div className='flex flex-col h-fit w-full items-center   bg-white text-black gap-[160px] '>
             {/* Product details */}
-            <div className=' mt-[200px] flex flex-row h-[40.4%] gap-[80px] mx-[120px] items-start '>
+            <div className=' mt-[200px] mb-[104px] flex flex-row h-[40.4%] gap-[80px] mx-[120px] items-start '>
                 {/* Product Display */}
                 <div className=' w-[44%]  bg-white'>
                     {/* product display combined div */}
@@ -87,36 +132,35 @@ function ProductPage() {
 
             </div>
             {/* product list section */}
-            <div className='flex flex-col gap-[146px] px-[120px]  justify-start items-center w-full h-[59.6%] bg-white'>
+            <div className='flex flex-col  px-[120px] mb-[321px] justify-start items-center w-full h-[59.6%] bg-white'>
                 {/* similar Products */}
-                <div className='  flex flex-col '>
+                <div className='  flex flex-col mb-[67px] '>
                     {/* title */}
-                    <div className='text-black  font-DM_Sans  font-normal text-[32px]  mb-[32px]'>Similar Products</div>
+                    <div className='text-black  font-DM_Sans  font-normal text-[32px]  mb-[48px]'>Similar Products</div>
                     {/* ProductCardList */}
-                    <div className='w-full  flex flex-row gap-[40px] jusity-self-start justify-start items-center  '>
+                    <div className='w-full  flex flex-row flex-wrap gap-[24px] jusity-self-start justify-start items-center  '>
                         {/* cards */}
                         {
-                            cards.filter((card, index) => {
-                                return index < 5
-                            }).map((card) => (
+                            cards.map((card) => (
                                 <ProductCard ProductCard={card} />
                             ))}
+                        <div className='flex  hover:cursor-pointer px-[44px] py-[8px] ring-1 ring-black  text-[#202020] text-[15px] font-Plus_Jakarta_Sans font-semibold'>Show More</div>
                     </div>
 
                 </div>
                 {/* More from Section */}
                 <div className=' flex flex-col '>
                     {/* title */}
-                    <div className='text-black  font-DM_Sans  font-normal text-[32px]  mb-[32px]'>More from Call Of Duty</div>
+                    <div className='text-black  font-DM_Sans  font-normal text-[32px]  mb-[48px]'>More from Call Of Duty</div>
                     {/* ProductCardList */}
-                    <div className='w-full  flex flex-row gap-[40px] jusity-self-start justify-start items-center  '>
+                    <div className='w-full  flex flex-wrap flex-row gap-[24px] jusity-self-start justify-start items-center  '>
                         {/* cards */}
                         {
-                            cards.filter((card, index) => {
-                                return index < 5
-                            }).map((card) => (
+                            cards.map((card) => (
                                 <ProductCard ProductCard={card} />
                             ))}
+                        <div className='flex  hover:cursor-pointer px-[44px] py-[8px] ring-1 ring-black  text-[#202020] text-[15px] font-Plus_Jakarta_Sans font-semibold'>Show More</div>
+
                     </div>
 
                 </div>

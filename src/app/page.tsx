@@ -212,7 +212,7 @@ export default function Home() {
         {/* search bar */}
           <div className=' relative  flex flex-row items-center gap-[67px] px-[12px] w-[370px] h-[46px] ring-2 ring-black rounded-md'>
           <input
-          className=' flex outline-none  w-[254px] h-[19px] text-[14px] text-[#171717] text-start font-meidum font-Plus_Jakarta_Sans '
+          className=' flex outline-none  placeholder-black  w-[254px] h-[19px] text-[14px] text-[#171717] text-start font-meidum font-Plus_Jakarta_Sans '
           placeholder='Search for anything but your soul :)'
           value={searchQuery}
           onChange={(e)=>setSearchQuery(e.target.value)}
