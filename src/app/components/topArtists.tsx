@@ -24,7 +24,7 @@ const TopArtists:React.FC<props>=({topArtists})=> {
       <div className='absolute flex flex-row -right-[40%] top-[30%] text-[14px] font-bold font-Plus_Jakarta_Sans leading-[17px] text-[#171717] '>
         <span className=' font-DM_Sans text-[32px] leading-[30px] font-bold pr-1 '>*</span> top-celebrated</div>
     </div>
-    <div className='  flex w-full overflow-x-scroll no-scrollbar '>
+    <div className='  flex w-full h-fit  overflow-x-scroll no-scrollbar '>
       {/* section1 */}
       <div className=' flex flex-row w-full animate-run  '>
 
