@@ -5,10 +5,10 @@ import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'DropState',
-  description: 'Creativity Pays Dividends',
-}
+// export const metadata: Metadata = {
+//   title: 'DropState',
+//   description: 'Creativity Pays Dividends',
+// }
 
 export default function RootLayout({
   children,
