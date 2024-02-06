@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'dropstate',
     description: 'Empowering Indian creators with dropstate: Artistic marketplace for unique designs',
-    url: 'http://localhost:3000',
+    url: 'https://dropstate-clone.vercel.app',
     siteName: 'dropstate',
     images: [
       {
