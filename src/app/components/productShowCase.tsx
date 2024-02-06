@@ -6,7 +6,7 @@ interface Props {
     ProductImages: string[],
 }
 
-const productShowCase:React.FC<Props>=({ ProductImages})=> {
+const ProductShowCase:React.FC<Props>=({ ProductImages})=> {
     const [selectedImage, setSelectedImage] = React.useState(ProductImages[0])
   return (
     <div className='w-full h-[677px] flex flex-row gap-[8px]'>
@@ -41,4 +41,4 @@ const productShowCase:React.FC<Props>=({ ProductImages})=> {
   )
 }
 
-export default productShowCase
+export default ProductShowCase

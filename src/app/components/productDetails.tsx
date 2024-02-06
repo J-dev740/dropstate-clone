@@ -13,7 +13,7 @@ interface Props {
     ProductDetails: Partial<ProductType>
 }
 
-const productDetails:React.FC<Props>=({ ProductDetails })=>{
+const ProductDetails:React.FC<Props>=({ ProductDetails })=>{
     const { type, name, designedBy: designer, sizeChart, colorChart, price:basePrice, deliveryDetails, designFeature,availableQuantity } = ProductDetails
     const [open, isOpen] = useState(false)
     const[buyItem,setBuyItem]=useState<BuyOptions>({
@@ -277,4 +277,4 @@ const productDetails:React.FC<Props>=({ ProductDetails })=>{
     )
 }
 
-export default productDetails
+export default ProductDetails
