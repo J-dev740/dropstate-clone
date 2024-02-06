@@ -249,7 +249,10 @@ export default function Home() {
                 <ul className='w-full h-fit flex flex-col gap-[16px] mt-[16px] mb-[16px]'>
                   {key==KEY.DROP?items.drops.filter((item:any)=>searchQuery!==''?item.name.includes(searchQuery):item).map((item:any,index)=>{
                     return (
-                      <div className='flex flex-row items-center justify-between  w-full h-fit'>
+                      <div
+                      key={index} 
+
+                      className='flex flex-row items-center justify-between  w-full h-fit'>
                         <div className='flex flex-row gap-[16px]'>
                         <div 
                         style={{backgroundImage:`url(${item.img})`}}
@@ -268,7 +271,8 @@ export default function Home() {
                   })
                   :key==KEY.CREATOR?items.creators.filter((item:any)=>searchQuery!==''?item.name.includes(searchQuery):item).map((item:any,index)=>{
                     return (
-                      <div className='flex flex-row items-center justify-between  w-full h-fit'>
+                      <div
+                      key={index} className='flex flex-row items-center justify-between  w-full h-fit'>
                         <div className='flex flex-row gap-[16px]'>
                         <div
                         style={{backgroundImage:`url(${item.img})`}}
@@ -289,7 +293,8 @@ export default function Home() {
                     )
                   }):items.themes.filter((item:any)=>searchQuery!==''?item.name.includes(searchQuery):item).map((item:any,index)=>{
                     return (
-                      <div className='flex flex-row items-center justify-between  w-full h-fit'>
+                      <div
+                      key={index} className='flex flex-row items-center justify-between  w-full h-fit'>
                         <div className=' flex flex-row gap-[16px]'>
                         <div
                         className='flex w-[48px] h-[48px] rounded-[6px] bg-cover bg-center bg-no-repeat'

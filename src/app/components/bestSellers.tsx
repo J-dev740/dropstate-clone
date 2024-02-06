@@ -83,7 +83,7 @@ const BestSellers:React.FC<props> = () => {
     <div className='flex flex-col items-center  w-[77%] h-fit  '>
         <div className=' relative flex flex-col items-center w-[1250px]'>
               {/* h1 */}
-        <p className='text-[#171717] font-Plus_Jakarta_Sans font-normal leading-[26px] text-[24px]'>Discover What Everyone's Loving</p>
+        <p className='text-[#171717] font-Plus_Jakarta_Sans font-normal leading-[26px] text-[24px]'>Discover What Everyone&#39;s Loving</p>
         {/* h2 */}
         <span className='text-[#171717]  font-DM_Sans font-normal leading-[80px] text-[72px]'>The BestSellers</span>
         {/* feature card list */}

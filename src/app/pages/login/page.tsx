@@ -87,7 +87,7 @@ const Login: React.FC<props> = () => {
                         </div>
                         {/* signup  */}
                         <button className='flex flex-row bg-black justify-center items-center text-center w-full  py-[17px] text-white  text-[14px] font-Plus_Jakarta_Sans font-bold leading-normal'>
-                            Let's Mint Money
+                            Let&#39;s Mint Money
                         </button>
                         {/* terms and conditions  */}
                         <div

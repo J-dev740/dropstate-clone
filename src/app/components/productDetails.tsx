@@ -13,7 +13,7 @@ interface Props {
     ProductDetails: Partial<ProductType>
 }
 
-function productDetails({ ProductDetails }: Props) {
+const productDetails:React.FC<Props>=({ ProductDetails })=>{
     const { type, name, designedBy: designer, sizeChart, colorChart, price:basePrice, deliveryDetails, designFeature,availableQuantity } = ProductDetails
     const [open, isOpen] = useState(false)
     const[buyItem,setBuyItem]=useState<BuyOptions>({
@@ -147,7 +147,7 @@ function productDetails({ ProductDetails }: Props) {
                             {/* description div */}
                             <div className='text-[#171717] font-normal mb-[16px]'>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s,
                                 when an  Unknown printer took a galley of type and scrambled it to make a type specimen book.
                                 It has survived not only five centuries, but also the leap into
 
@@ -244,7 +244,7 @@ function productDetails({ ProductDetails }: Props) {
                             {/* description div */}
                             <div className='text-[#171717] font-normal mb-[24px]'>
                                 Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s,
                                 when an  Unknown printer took a galley of type and scrambled it to make a type specimen book.
                                 It has survived not only five centuries, but also the leap into
 

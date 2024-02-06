@@ -153,8 +153,12 @@ function ProductPage() {
                     <div className='w-full  flex flex-row flex-wrap gap-[22px] jusity-self-start justify-start items-center  '>
                         {/* cards */}
                         {
-                            cards.map((card) => (
-                                <ProductCard ProductCard={card} />
+                            cards.map((card,index) => (
+                                <div
+                                className='flex'
+                                key={index}>
+                                    <ProductCard ProductCard={card} />
+                                </div>
                             ))}
                         <div className='flex  hover:cursor-pointer px-[44px] py-[8px] ring-1 ring-black  text-[#202020] text-[15px] font-Plus_Jakarta_Sans font-semibold'>Show More</div>
                     </div>
@@ -168,8 +172,13 @@ function ProductPage() {
                     <div className='w-full  flex flex-wrap flex-row gap-[22px] jusity-self-start justify-start items-center  '>
                         {/* cards */}
                         {
-                            cards.map((card) => (
+                            cards.map((card,index) => (
+                                <div
+                                className='flex'
+                                key={index}
+                                >
                                 <ProductCard ProductCard={card} />
+                                </div>
                             ))}
                         <div className='flex  hover:cursor-pointer px-[44px] py-[8px] ring-1 ring-black  text-[#202020] text-[15px] font-Plus_Jakarta_Sans font-semibold'>Show More</div>
 
