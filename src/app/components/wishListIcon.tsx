@@ -4,7 +4,7 @@ import React from 'react'
 
 function WishListIcon() {
   return (
-        <AiOutlineHeart className=' p-[8px] w-[40px] h-[40px] flex justify-center  text-[32px]  text-white bg-black bg-opacity-70 backdrop-blur-md '></AiOutlineHeart>
+        <AiOutlineHeart className=' p-[4px] w-[24px] h-[24px] flex justify-center  text-[16px]  text-white bg-black bg-opacity-70 backdrop-blur-md '></AiOutlineHeart>
     
   )
 }

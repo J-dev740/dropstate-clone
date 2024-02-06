@@ -21,8 +21,8 @@ const TopArtists:React.FC<props>=({topArtists})=> {
     <div className='absolute  -top-[106px] left-[38%] w-fit   
      h-[165px] font-normal font-DM_Sans text-[#171717]  text-justify  place-content-center leading-normal text-[120px]'>
       artists
-      <div className='absolute -right-[20%] top-[35%] text-[14px] font-bold font-Plus_Jakarta_Sans text-[#171717]'>
-        <span className=' font-DM_Sans font-bold '>*</span> trending</div>
+      <div className='absolute flex flex-row -right-[40%] top-[30%] text-[14px] font-bold font-Plus_Jakarta_Sans leading-[17px] text-[#171717] '>
+        <span className=' font-DM_Sans text-[32px] leading-[30px] font-bold pr-1 '>*</span> top-celebrated</div>
     </div>
     <div className='  flex w-full overflow-x-scroll no-scrollbar '>
       {/* section1 */}

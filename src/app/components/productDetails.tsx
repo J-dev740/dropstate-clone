@@ -235,7 +235,7 @@ function productDetails({ ProductDetails }: Props) {
                     <div
                         //  onClick={()=>isOpen(!open)}
                         className='w-full flex flex-row justify-between items-center  '>
-                        <div className=''>Design Feature</div>
+                        <div className=''>About Artist</div>
                         <div className=''>^</div>
                     </div>
                     {/* details when toggled */}
