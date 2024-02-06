@@ -218,7 +218,7 @@ export default function Home() {
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="dropstate"/>
 <meta property="og:description" content="Empowering Indian creators with dropstate: Artistic marketplace for unique designs"/>
-<meta property="og:image" content="https://opengraph.b-cdn.net/production/documents/90844fc5-a667-478b-a361-7c78eacf89e4.jpg?token=obYvzw2HBkYulgOhwD9ukFVV3tiBKjrDk0YvA2W32aY&height=703&width=564&expires=33243257123"/>
+<meta property="og:image" content="https://i.postimg.cc/BbPBZ8pH/Hero.png"/>
 
 {/* <!-- Twitter Meta Tags --> */}
 <meta name="twitter:card" content="summary_large_image"/>
@@ -226,7 +226,7 @@ export default function Home() {
 <meta property="twitter:url" content="https://dropstate-clone.vercel.app/"/>
 <meta name="twitter:title" content="dropstate"/>
 <meta name="twitter:description" content="Empowering Indian creators with dropstate: Artistic marketplace for unique designs"/>
-<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/documents/90844fc5-a667-478b-a361-7c78eacf89e4.jpg?token=obYvzw2HBkYulgOhwD9ukFVV3tiBKjrDk0YvA2W32aY&height=703&width=564&expires=33243257123"/>
+<meta name="twitter:image" content="https://i.postimg.cc/BbPBZ8pH/Hero.png"/>
       </Head>
       {/* banner  */}
       <Banner />
