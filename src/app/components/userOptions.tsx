@@ -4,7 +4,7 @@ import { IoBagOutline } from "react-icons/io5";
 const UserOpt: React.FC = () => {
     return (
         <div className='flex mr-[66px]'>
-            <ul className='flex flex-row gap-[20px] items-center justify-center  font-medium text-[16px] text-[#171717] '>
+            <ul className='flex flex-row gap-[20px] items-center justify-center  font-medium font-Plus_Jakarta_Sans leading-[20px] text-[16px] text-[#171717] '>
                 <li>
                     <Link href='#'>
                     TrackOrder

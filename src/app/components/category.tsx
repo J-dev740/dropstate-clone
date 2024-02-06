@@ -11,7 +11,8 @@ const Category:React.FC<props>=({tdrops})=> {
           {/* header relative to artists section*/}
           <div className='absolute -top-[106px] left-[38%]  w-fit    h-[165px] font-normal font-DM_Sans text-[#171717]  text-justify  place-content-center leading-normal text-[120px]'>
               Category
-              <div className='absolute -right-[20%] top-[35%] text-[14px] font-bold font-Plus_Jakarta_Sans text-[#171717]'><span className=' font-DM_Sans font-bold '>*</span> shop it</div>
+              <div className='absolute flex flex-row -right-[18%] top-[30%] text-[14px] font-bold font-Plus_Jakarta_Sans leading-[17px] text-[#171717] '>
+        <span className=' font-DM_Sans text-[32px] leading-[30px] font-bold pr-1 '>*</span> trending</div>
 
           </div>
           {/* single card */}

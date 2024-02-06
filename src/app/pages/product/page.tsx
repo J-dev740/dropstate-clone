@@ -112,13 +112,25 @@ function ProductPage() {
             price: 200.46,
             src: 'https://100mph.cc/cdn/shop/files/unisex-v-neck-tee-black-front-6493a4d0deb23_2048x2048.jpg?v=1687547335'
         }, 
+        {
+            type: 'Over-sized Tshirt',
+            name: 'Dragon Ball Z',
+            price: 200.46,
+            src: 'https://100mph.cc/cdn/shop/files/unisex-v-neck-tee-black-front-6493a4d0deb23_2048x2048.jpg?v=1687547335'
+        }, 
+        {
+            type: 'T-shirt',
+            name: 'Dimensional',
+            price: 40.46,
+            src: 'https://media.centrepointstores.com/i/centrepoint/8914398-AW23MCORE5-SPW239623_01-2100.jpg?fmt=auto&$quality-standard$&sm=c&$prodimg-m-prt-pdp-2x$'
+        },
     ]
     return (
-        <div className='flex flex-col h-fit w-full items-center   bg-white text-black gap-[160px] '>
+        <div className='flex flex-col h-fit w-full    bg-white text-black gap-[160px] '>
             {/* Product details */}
-            <div className=' mt-[200px] mb-[104px] flex flex-row h-[40.4%] gap-[80px] mx-[120px] items-start '>
+            <div className=' mt-[200px] mb-[104px] flex flex-row h-[40.4%] gap-[80px] px-[120px] items-start '>
                 {/* Product Display */}
-                <div className=' w-[44%]  bg-white'>
+                <div className='flex  w-[44%]  bg-white'>
                     {/* product display combined div */}
                     <ProductShowCase ProductImages={Product.productImage} />
 
@@ -126,7 +138,7 @@ function ProductPage() {
                 </div>
                 {/* Product Description and buy section */}
                 {/* //TODO: add an extra div here with w-[55%] and bg-white when a component is called here and change current w-55 to w-full */}
-                <div className='w-[55%] bg-white '>
+                <div className='flex w-[55%] bg-white '>
                     <ProductDetails ProductDetails={Product} />
                 </div>
 
@@ -134,11 +146,11 @@ function ProductPage() {
             {/* product list section */}
             <div className='flex flex-col  px-[120px] mb-[321px] justify-start items-center w-full h-[59.6%] bg-white'>
                 {/* similar Products */}
-                <div className='  flex flex-col mb-[67px] '>
+                <div className='  flex flex-col   mb-[67px] '>
                     {/* title */}
                     <div className='text-black  font-DM_Sans  font-normal text-[32px]  mb-[48px]'>Similar Products</div>
                     {/* ProductCardList */}
-                    <div className='w-full  flex flex-row flex-wrap gap-[24px] jusity-self-start justify-start items-center  '>
+                    <div className='w-full  flex flex-row flex-wrap gap-[22px] jusity-self-start justify-start items-center  '>
                         {/* cards */}
                         {
                             cards.map((card) => (
@@ -149,11 +161,11 @@ function ProductPage() {
 
                 </div>
                 {/* More from Section */}
-                <div className=' flex flex-col '>
+                <div className=' flex flex-col  '>
                     {/* title */}
                     <div className='text-black  font-DM_Sans  font-normal text-[32px]  mb-[48px]'>More from Call Of Duty</div>
                     {/* ProductCardList */}
-                    <div className='w-full  flex flex-wrap flex-row gap-[24px] jusity-self-start justify-start items-center  '>
+                    <div className='w-full  flex flex-wrap flex-row gap-[22px] jusity-self-start justify-start items-center  '>
                         {/* cards */}
                         {
                             cards.map((card) => (

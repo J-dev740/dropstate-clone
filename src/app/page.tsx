@@ -138,7 +138,8 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [list,setList]=useState(false);
   const [key,setKey]=useState<KEY>(KEY.DROP);
-  // const [active,setActive]=useState(false);
+  const [active,setActive]=useState(false);
+  const [active1,setActive1]=useState(false);
   const [items,setItems]=useState<Items>({
     drops:[{
       img:'https://images.hdqwalls.com/download/spider-man-miles-morales-artwork-4k-nr-2048x1152.jpg',
@@ -200,8 +201,13 @@ export default function Home() {
     },
   ],
   })
+
+  // const targetDiv=document.getElementById('list');
   return (
-    <main className="flex min-h-screen flex-col items-start  bg-white ">
+    <main 
+    onClick={()=>{if(!active1 && !active)setList(false)}}
+    id='full'
+    className="flex min-h-screen flex-col items-start  bg-white ">
       {/* banner  */}
       <Banner />
       {/* brandName and userOptions */}
@@ -210,14 +216,19 @@ export default function Home() {
               {/* brandName and sometext */}
         <Brand />
         {/* search bar */}
-          <div className=' relative  flex flex-row items-center gap-[67px] px-[12px] w-[370px] h-[46px] ring-2 ring-black rounded-md'>
+          <div 
+          // onBlur={()=>setActive(false)}
+          id='list'
+          className=' relative  flex flex-row items-center gap-[67px] px-[12px] w-[370px] h-[46px] ring-2 ring-black rounded-md'>
           <input
           className=' flex outline-none  placeholder-black  w-[254px] h-[19px] text-[14px] text-[#171717] text-start font-meidum font-Plus_Jakarta_Sans '
           placeholder='Search for anything but your soul :)'
           value={searchQuery}
           onChange={(e)=>setSearchQuery(e.target.value)}
-          onMouseEnter={()=>setList(true)}
-        
+          onFocus={()=>{setList(true)}}
+          onMouseEnter={()=>setActive1(true)}
+          onBlur={()=>{if(!active)setList(false);}}
+          onMouseLeave={()=>setActive1(false)}
          
           />
           <div className=' flex  justify-center items-center text-white text-[15px] font-medium font-Plus_Jakarta_Sans 
@@ -225,19 +236,17 @@ export default function Home() {
           {/* dropdown search list  */}
           {list && (
             <div 
-            
-            onMouseLeave={()=>{
-              setList(false);
-            }}
-            className='absolute z-30 flex flex-col -bottom-[260px] left-0 w-[370px] h-[250px] p-[16px] bg-white ring-[1px] ring-black rounded-md'>
+            onMouseEnter={()=>setActive(true)}
+            onMouseLeave={()=>setActive(false)}
+            className=' list absolute z-30 flex flex-col -bottom-[260px] left-0 w-[370px] h-[250px] p-[16px] bg-white ring-[1px] ring-black rounded-md'>
               {/* navigation tabs */}
-              <div className='flex w-full border-b-[1px] border-[#AEAEAE]  flex-row items-end justify-start mt-[10px]  gap-[24px] text-[14px] font-medium text-[#AEAEAE] '>
+              <div className='flex w-full border-b-[1px] border-[#AEAEAE]  flex-row items-end justify-start   gap-[24px] text-[14px] font-medium text-[#AEAEAE] '>
                 <p className={(key=='drops'?'text-black border-black border-b-[1px] ':'')+'p-1 hover:cursor-pointer '} onClick={()=>setKey(KEY.DROP)}>Drops</p>
                 <p className={(key=='creators'?'text-black border-black border-b-[1px] ':'')+'p-1 hover:cursor-pointer '} onClick={()=>setKey(KEY.CREATOR)}>Creators</p>
                 <p className={(key=='themes'?'text-black border-black border-b-[1px] ':'')+'p-1 hover:cursor-pointer '} onClick={()=>setKey(KEY.THEME)}>Themes</p>
               </div>
               <div className='w-full h-full flex  overflow-y-scroll no-scrollbar'>
-                <ul className='w-full h-fit flex flex-col gap-[16px] mt-[16px]'>
+                <ul className='w-full h-fit flex flex-col gap-[16px] mt-[16px] mb-[16px]'>
                   {key==KEY.DROP?items.drops.filter((item:any)=>searchQuery!==''?item.name.includes(searchQuery):item).map((item:any,index)=>{
                     return (
                       <div className='flex flex-row items-center justify-between  w-full h-fit'>
