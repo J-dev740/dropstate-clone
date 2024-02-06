@@ -6,11 +6,28 @@ import Head from 'next/head'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'DropState',
-  description: 'Creativity Pays Dividends',
-  
-}
-
+  openGraph: {
+    title: 'dropstate',
+    description: 'Empowering Indian creators with dropstate: Artistic marketplace for unique designs',
+    url: 'http://localhost:3000',
+    siteName: 'dropstate',
+    images: [
+      {
+        url: 'https://i.postimg.cc/BbPBZ8pH/Hero.png',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://i.postimg.cc/BbPBZ8pH/Hero.png',
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+};
 export default function RootLayout({
   children,
 }: {
