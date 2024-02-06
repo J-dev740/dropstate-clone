@@ -26,7 +26,7 @@ const TopArtists:React.FC<props>=({topArtists})=> {
     </div>
     <div className='  flex w-full h-fit  overflow-x-scroll no-scrollbar '>
       {/* section1 */}
-      <div className=' flex flex-row w-full h-fit animate-run  '>
+      <div className=' flex flex-row w-full h-fit hover:animate-none animate-run  '>
 
 
         {
